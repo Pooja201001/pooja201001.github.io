@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -24,36 +23,45 @@
     <link rel="stylesheet" href="css/style.css">
 
     <style>
-      /* Custom Styles */
-      body {
-        background-color: #f5f5dc; /* Beige/Cream background */
-        color: #3e2723; /* Dark brown text color */
-      }
+        /* Setting the background color to beige/cream and text color to dark brown/black */
+        body {
+            background-color: #F5F5DC; /* Beige/Cream */
+            color: #4B3621; /* Dark Brown */
+        }
 
-      .navbar-nav .nav-link,
-      .navbar-brand {
-        color: #3e2723 !important; /* Dark brown for navigation links */
-      }
+        /* Specific text elements with black color */
+        h1, h2, h3, h4, h5, p, a {
+            color: #000000; /* Black */
+        }
 
-      .text h1 span {
-        color: #3e2723 !important; /* Dark brown for "I'm Pooja Singh" */
-      }
+        /* Styling the navigation bar with dark brown text */
+        .navbar-dark .navbar-nav .nav-link {
+            color: #4B3621;
+        }
 
-      /* About Section */
-      .about-info span.title-s {
-        color: #3e2723; /* Dark brown for section titles in About */
-      }
+        .navbar-brand {
+            color: #4B3621;
+        }
 
-      /* Contact Section */
-      .heading-section a {
-        color: #8d6e63 !important; /* Light brown for contact info links */
-      }
-      .heading-section p a {
-        color: #8d6e63 !important; /* Light brown for contact info */
-      }
+        /* Keeping the overlay text color consistent */
+        .slider-item .text {
+            color: #4B3621;
+        }
+
+        /* About section headings */
+        .heading-section h1, .heading-section h2 {
+            color: #4B3621;
+        }
+
+        /* Contact section text color */
+        #contact-section .heading-section p,
+        #contact-section a {
+            color: #4B3621;
+        }
     </style>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index.html">Pooja Singh</a>
@@ -72,7 +80,7 @@
 	      </div>
 	    </div>
 	  </nav>
-	  
+
 	  <section id="home-section" class="hero">
 		<div class="home-slider owl-carousel">
 			<div class="slider-item">
@@ -84,7 +92,7 @@
 							<div class="overlay"></div>
 						</div>
 						<div class="one-forth d-flex align-items-center ftco-animate" data-scrollax="properties: { translateY: '70%' }">
-							<div class="text" style="color: rgb(139, 228, 199);">
+							<div class="text">
 								<h1 class="mb-4 mt-3">I'm <span>Pooja Singh</span></h1>
 								<br><br>
 								<h4>MSc Economics with Data Analytics Specialization</h4>
@@ -106,8 +114,7 @@
 						<div class="img-about img d-flex align-items-stretch">
 							<div class="overlay">
 								<div class="row">
-									<div class="col-sm-6 col-md-5">
-									</div>
+									<div class="col-sm-6 col-md-5"></div>
 									<div class="col-sm-6 col-md-7">
 									  <div class="about-info">
 										<p><span class="title-s">Name: </span> <span>Pooja Singh</span></p>
@@ -126,7 +133,6 @@
 							<div class="col-md-12 heading-section ftco-animate">
 								<h1 class="big">About</h1>
 								<h2 class="mb-4">About Me</h2>
-								
 								<p>Hello! I'm Pooja Singh, currently pursuing an MSc in Economics with a specialization in Data Analytics at Symbiosis School of Economics, Pune. I am passionate about leveraging data to drive meaningful insights and solutions. My academic journey began with a BSc in Economics, where I developed a strong foundation in economic theories and data analysis.</p>
 								<p>I have gained practical experience through internships at Cybrom Technology Pvt. Ltd. and JS Baghel & Co., where I honed my skills in data cleaning, analysis, and visualization. My projects have included comprehensive analyses of carbon emissions and market trends, providing valuable insights for environmental and business decision-making.</p>
 								<p>In addition to my technical skills in SQL, Python, R and data visualization tools like PowerBI and Tableau, I am committed to continuous learning and professional growth. Feel free to connect with me via email or LinkedIn to explore opportunities or discuss data-driven solutions!</p>
@@ -153,105 +159,114 @@
           <div class="col-md-10 heading-section text-center ftco-animate">
           	<h1 class="big big-2">Resume</h1>
 			  <h2 class="mb-4">Resume</h2>
-			  <a href="https://drive.google.com/file/d/1aTk1IgyhaSAZIqct3XqMCDpX3sOiRwW7/view?usp=sharing" class="mb-4">Resume Link</a>
-		  </div>
-        </div>
-        <div class="row">
-        	<div class="col-md-6">
-        		<div class="resume-wrap ftco-animate">
-        			<span class="date">July 2022 - Present</span>
-        			<h2>MSc Economics with Data Analytics specialization</h2>
-        			<span class="location">Symbiosis School of Economics, Pune</span>
-        			<p class="mt-4">My MSc program has equipped me with advanced knowledge in economics, with a focus on data analytics techniques. I have explored data-driven decision-making approaches in various economic contexts, enhancing my ability to analyze and interpret complex data sets to address economic challenges.</p>
-        		</div>
-        	</div>
-        	<div class="col-md-6">
-        		<div class="resume-wrap ftco-animate">
-        			<span class="date">May 2023 - June 2023</span>
-        			<h2>Data Science Intern</h2>
-        			<span class="location">Cybrom Technology Pvt. Ltd.</span>
-        			<p class="mt-4">During my internship, I gained hands-on experience in data science, focusing on data cleaning, analysis, and visualization. I collaborated on projects involving data-driven insights for business optimization, utilizing tools like Python, SQL, and Tableau.</p>
-        		</div>
-        	</div>
-        	<div class="col-md-6">
-        		<div class="resume-wrap ftco-animate">
-        			<span class="date">May 2022 - June 2022</span>
-        			<h2>Intern</h2>
-        			<span class="location">JS Baghel & Co.</span>
-        			<p class="mt-4">At JS Baghel & Co., I contributed to financial data analysis and reporting. My responsibilities included data entry, financial statement preparation, and assisting in audits. I developed a keen eye for detail and improved my understanding of financial data management.</p>
-        		</div>
-        	</div>
-        </div>
-    	</div>
-    </section>
-	  
-    <section class="ftco-section ftco-no-pb" id="project-section">
-      <div class="container">
-        <div class="row justify-content-center pb-5">
-          <div class="col-md-12 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Projects</h1>
-            <h2 class="mb-4">My Projects</h2>
+			  <a href="https://drive.google.com/file/d/1aTk1IgyhaSAZIojL5qKtsRwsdf8kTTor/view?usp=drive_link" class="btn btn-primary" target="_blank">Download CV</a>
           </div>
         </div>
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-            <div class="project img">
-              <div class="text">
-                <h3><a href="#">Carbon Emissions Analysis</a></h3>
-                <p>This project involved analyzing carbon emissions data to identify trends and patterns. The analysis provided insights into the impact of industrial activities on the environment and helped propose strategies for emission reduction.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-            <div class="project img">
-              <div class="text">
-                <h3><a href="#">Market Trends Analysis</a></h3>
-                <p>In this project, I analyzed market trends using historical sales data. The findings were used to forecast future trends and make data-driven recommendations for business growth and product development.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+		
+		<div class="row">
+			<div class="col-md-6">
+				<div class="resume-wrap ftco-animate">
+					<h2 class="mb-4">Education</h2>
+					<ul class="timeline">
+						<li>
+							<h5>MSc Economics with Data Analytics specialization - Symbiosis School of Economics</h5>
+							<p><strong>2022 - Present</strong><br>Pune, Maharashtra, India</p>
+						</li>
+						<li>
+							<h5>BSc Economics - Dr. Harisingh Gour Vishwavidyalaya Sagar</h5>
+							<p><strong>2019 - 2022</strong><br>Madhya Pradesh, India</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="resume-wrap ftco-animate">
+					<h2 class="mb-4">Experience</h2>
+					<ul class="timeline">
+						<li>
+							<h5>Intern - Cybrom Technology Pvt. Ltd.</h5>
+							<p><strong>Jan 2023 - Feb 2023</strong><br>Worked on a carbon emissions analysis project, analyzing data and contributing to actionable insights for environmental sustainability.</p>
+						</li>
+						<li>
+							<h5>Intern - JS Baghel & Co.</h5>
+							<p><strong>May 2023 - July 2023</strong><br>Focused on market analysis, trends forecasting, and data visualization for strategic decision-making.</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="row justify-content-center pb-5">
+			<div class="col-md-10 heading-section text-center ftco-animate">
+				<h2 class="mb-4">Projects</h2>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="project ftco-animate">
+					<h3 class="mb-4">Carbon Emissions Analysis</h3>
+					<p>Analyzed global carbon emissions data to identify trends, contributing factors, and potential mitigation strategies. Utilized Python for data analysis and visualization.</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="project ftco-animate">
+					<h3 class="mb-4">Market Trends Forecasting</h3>
+					<p>Developed a market trends forecasting model using time series analysis. This project was pivotal in providing actionable insights for business strategy development.</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="project ftco-animate">
+					<h3 class="mb-4">Data Cleaning and Visualization</h3>
+					<p>Worked on cleaning and visualizing large datasets, ensuring data accuracy and creating dashboards for effective decision-making using Power BI and Tableau.</p>
+				</div>
+			</div>
+		</div>
+	</div>
     </section>
 
-    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-      <div class="container">
-        <div class="row justify-content-center pb-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Contact Me</h2>
-          </div>
-        </div>
-        <div class="row d-flex contact-info mb-5">
-          <div class="col-md-4 d-flex">
-            <div class="align-self-stretch box p-4 text-center">
-              <div class="icon d-flex align-items-center justify-content-center">
-                <span class="icon-map"></span>
-              </div>
-              <h3 class="mb-4">Location:</h3>
-              <p><a href="#">Pune, Maharashtra, India</a></p>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex">
-            <div class="align-self-stretch box p-4 text-center">
-              <div class="icon d-flex align-items-center justify-content-center">
-                <span class="icon-phone"></span>
-              </div>
-              <h3 class="mb-4">Email:</h3>
-              <p><a href="mailto:your.email@example.com">your.email@example.com</a></p>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex">
-            <div class="align-self-stretch box p-4 text-center">
-              <div class="icon d-flex align-items-center justify-content-center">
-                <span class="icon-globe"></span>
-              </div>
-              <h3 class="mb-4">LinkedIn:</h3>
-              <p><a href="#">Pooja Singh</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+	<section class="ftco-section ftco-no-pb" id="contact-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Contact</h1>
+					<h2 class="mb-4">Contact</h2>
+					<p>I'd love to hear from you! Whether you have a project in mind, a job opportunity, or just want to connect, feel free to reach out.</p>
+				</div>
+			</div>
+			<div class="row d-flex contact-info mb-5">
+				<div class="col-md-4 d-flex">
+					<div class="info bg-light p-4">
+						<p><span>Email:</span> <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex">
+					<div class="info bg-light p-4">
+						<p><span>LinkedIn:</span> <a href="https://www.linkedin.com/in/pooja-singh/" target="_blank">Pooja Singh</a></p>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex">
+					<div class="info bg-light p-4">
+						<p><span>Location:</span> <a>Pune, Maharashtra, India</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
