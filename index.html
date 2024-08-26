@@ -104,53 +104,60 @@
                 margin-right: 0; /* Remove margin from the last item */
             }
         }
+
+        /* Additional styles for responsive layout */
+        @media (max-width: 767px) {
+            .about-summary, .about-qualifications {
+                margin-right: 0;
+            }
+        }
     </style>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 	  
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Pooja Singh</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+        <div class="container">
+            <a class="navbar-brand" href="#home-section">Pooja Singh</a>
+            <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Education</span></a></li>
-	          <li class="nav-item"><a href="#education-section" class="nav-link"><span>Contact</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav nav ml-auto">
+                    <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+                    <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+                    <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+                    <li class="nav-item"><a href="#education-section" class="nav-link"><span>Education</span></a></li>
+                    <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-	  <section id="home-section" class="hero">
-		<div class="home-slider owl-carousel">
-			<div class="slider-item">
-				<div class="overlay"></div>
-				<div class="container">
-					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-						<br></br>
-						<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg.jpg); width: 25%; height: 15%; background-size: contain;">
-							<div class="overlay"></div>
-						</div>
-						<div class="one-forth d-flex align-items-center ftco-animate" data-scrollax="properties: { translateY: '70%' }">
-							<div class="text">
-								<h1 class="mb-4 mt-3">I'm <span>Pooja Singh</span></h1>
-								<br><br>
-								<h4>MSc Economics with Data Analytics Specialization</h4>
-								<h5>From Symbiosis School of Economics</h5>
-								<h5>Pune</h5>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+    <section id="home-section" class="hero">
+        <div class="home-slider owl-carousel">
+            <div class="slider-item">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+                        <br></br>
+                        <div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg.jpg); width: 25%; height: 15%; background-size: contain;">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax="properties: { translateY: '70%' }">
+                            <div class="text">
+                                <h1 class="mb-4 mt-3">I'm <span>Pooja Singh</span></h1>
+                                <br><br>
+                                <h4>MSc Economics with Data Analytics Specialization</h4>
+                                <h5>From Symbiosis School of Economics</h5>
+                                <h5>Pune</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
         <div class="container">
@@ -205,6 +212,34 @@
                             <li>
                                 <h4>JS Baghel & Co.</h4>
                                 <p>Market Research Intern</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section" id="education-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 heading-section ftco-animate">
+                    <h1 class="big">Education</h1>
+                    <h2 class="mb-4">My Educational Background</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="education-wrap">
+                        <h3>Education</h3>
+                        <ul class="timeline">
+                            <li>
+                                <h4>Symbiosis School of Economics</h4>
+                                <p>MSc Economics with Data Analytics Specialization</p>
+                            </li>
+                            <li>
+                                <h4>University Name</h4>
+                                <p>BSc Economics</p>
                             </li>
                         </ul>
                     </div>
