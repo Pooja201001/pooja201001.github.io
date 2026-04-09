@@ -1,309 +1,949 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Pooja Singh Portfolio</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/aos.css">
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pooja Singh — Data Analyst</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --white: #ffffff;
+      --off-white: #f7f6f3;
+      --light: #efefec;
+      --mid: #c8c8c0;
+      --muted: #8a8a80;
+      --dark: #2a2a26;
+      --ink: #1a1a16;
+      --accent: #3d6b4f;
+      --accent-light: #eaf2ec;
+    }
 
-    <style>
-        /* Setting the background color to beige/cream and text color to dark brown/black */
-        body {
-            background-color: #F5F5DC; /* Beige/Cream */
-            color: #4B3621; /* Dark Brown */
-        }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        /* Specific text elements with black color */
-        h1, h2, h3, h4, h5, p, a {
-            color: #000000; /* Black */
-        }
+    html { scroll-behavior: smooth; }
 
-        /* Styling the navigation bar with dark brown text */
-        .navbar-dark .navbar-nav .nav-link {
-            color: #4B3621;
-        }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--white);
+      color: var(--ink);
+      overflow-x: hidden;
+    }
 
-        .navbar-brand {
-            color: #4B3621;
-        }
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 48px;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--light);
+    }
 
-        /* Keeping the overlay text color consistent */
-        .slider-item .text {
-            color: #4B3621;
-        }
+    .nav-logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.15rem;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
 
-        /* About section headings */
-        .heading-section h1, .heading-section h2 {
-            color: #4B3621;
-        }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
 
-        /* Contact section text color */
-        #contact-section .heading-section p,
-        #contact-section a {
-            color: #4B3621;
-        }
+    .nav-links a {
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
 
-        /* About section layout */
-        .about-container {
-            display: flex;
-            justify-content: space-between;
-        }
+    .nav-links a:hover { color: var(--ink); }
 
-        .about-summary, .about-qualifications {
-            width: 48%;
-        }
+    .nav-cta {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--accent) !important;
+      border: 1px solid var(--accent);
+      padding: 7px 18px;
+      border-radius: 100px;
+      transition: background 0.2s, color 0.2s !important;
+    }
 
-        /* Justify alignment for the about summary */
-        .about-summary p {
-            text-align: justify;
-        }
+    .nav-cta:hover {
+      background: var(--accent) !important;
+      color: white !important;
+    }
 
-        /* Resume section layout */
-        .resume-wrap {
-            margin-bottom: 20px;
-        }
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 120px 48px 80px;
+      gap: 64px;
+      background: var(--white);
+      position: relative;
+    }
 
-        /* Full-width experience section */
-        .resume-wrap {
-            width: 100%;
-        }
-    </style>
-  </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Pooja Singh</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 42%;
+      height: 100%;
+      background: var(--off-white);
+      z-index: 0;
+    }
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-	          <li class="nav-item"><a href="#education-section" class="nav-link"><span>Education</span></a></li>
-	          <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
-	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
+    .hero-text { position: relative; z-index: 1; }
 
-	  <section id="home-section" class="hero">
-		<div class="home-slider owl-carousel">
-			<div class="slider-item">
-				<div class="overlay"></div>
-				<div class="container">
-					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-						<br></br>
-						<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg.jpg); width: 25%; height: 15%; background-size: contain;">
-							<div class="overlay"></div>
-						</div>
-						<div class="one-forth d-flex align-items-center ftco-animate" data-scrollax="properties: { translateY: '70%' }">
-							<div class="text">
-								<h1 class="mb-4 mt-3"><span>I'm Pooja Singh</span></h1>
-								<br><br>
-								<h4>MSc Economics with Data Analytics Specialization</h4>
-								<h5>From Symbiosis School of Economics</h5>
-								<h5>Pune</h5>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 24px;
+    }
 
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-    <div class="container">
-        <div class="row">
-            <div class="about-container">
-                <div class="about-summary">
-                    <div class="heading-section ftco-animate">
-                        <h1 class="big">About</h1>
-                        <h2 class="mb-4">About Me</h2>
-                        <p>Hello! I'm Pooja Singh, currently pursuing an MSc in Economics with a specialization in Data Analytics at Symbiosis School of Economics, Pune. I am passionate about leveraging data to drive meaningful insights and solutions. My academic journey began with a BSc in Economics, where I developed a strong foundation in economic theories and data analysis.</p>
-                        <p>I have gained practical experience through internships at Cybrom Technology Pvt. Ltd. and JS Baghel & Co., where I honed my skills in data cleaning, analysis, and visualization. My projects have included comprehensive analyses of real estate and carbon emissions, providing valuable insights for business decision-making.</p>
-                        <p>In addition to my technical skills in SQL, Python, R and data visualization tools like PowerBI and Tableau, I am committed to continuous learning and professional growth. Feel free to connect with me via email or LinkedIn!</p>
-                    </div>
-                </div>
-                <div class="about-qualifications">
-                    <div class="heading-section ftco-animate">
-                        <h2 class="mb-4">Qualifications</h2>
-                        <table style="width:100%; border-collapse: collapse;">
-                            <tr>
-                                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Profile</strong></td>
-                                <td style="padding: 8px; border: 1px solid #ddd;">Data Analytics</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Education</strong></td>
-                                <td style="padding: 8px; border: 1px solid #ddd;">MSc Economics with Data Analysis specialization</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Languages</strong></td>
-                                <td style="padding: 8px; border: 1px solid #ddd;">English, Hindi</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Programming</strong></td>
-                                <td style="padding: 8px; border: 1px solid #ddd;">SQL, Python (Core), R (Beginner level)</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Tools</strong></td>
-                                <td style="padding: 8px; border: 1px solid #ddd;">Microsoft Power BI, Tableau, STATA, SPSS, Advance Excel, Jupyter Notebook, Power Query, QGIS</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Other Skills</strong></td>
-                                <td style="padding: 8px; border: 1px solid #ddd;">Story Telling, Report Writing, Secondary Research, Primary Research, Market Research</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Interest</strong></td>
-                                <td style="padding: 8px; border: 1px solid #ddd;">Traveling, Strength training, Horse riding</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
+    .hero-tag::before {
+      content: '';
+      width: 24px; height: 1px;
+      background: var(--accent);
+    }
+
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.8rem, 5vw, 4.2rem);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 24px;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .hero-desc {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--muted);
+      max-width: 440px;
+      margin-bottom: 40px;
+      font-weight: 300;
+    }
+
+    .hero-actions { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--ink);
+      color: white;
+      padding: 13px 28px;
+      border-radius: 100px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-primary:hover { background: var(--accent); transform: translateY(-1px); }
+
+    .btn-secondary {
+      display: inline-block;
+      color: var(--ink);
+      padding: 13px 28px;
+      border-radius: 100px;
+      font-size: 0.88rem;
+      font-weight: 400;
+      text-decoration: none;
+      border: 1px solid var(--mid);
+      transition: border-color 0.2s, transform 0.15s;
+    }
+
+    .btn-secondary:hover { border-color: var(--ink); transform: translateY(-1px); }
+
+    .hero-image {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-image-wrap {
+      width: 340px;
+      height: 420px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--light);
+      position: relative;
+    }
+
+    .hero-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .hero-image-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .hero-image-placeholder svg {
+      width: 48px; height: 48px;
+      opacity: 0.3;
+    }
+
+    .status-badge {
+      position: absolute;
+      bottom: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      border: 1px solid var(--light);
+      border-radius: 100px;
+      padding: 8px 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      white-space: nowrap;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+
+    .status-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: #22c55e;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    /* ── SECTION COMMON ── */
+    section { padding: 96px 48px; }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      max-width: 48px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    .section-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 48px;
+    }
+
+    /* ── ABOUT ── */
+    #about { background: var(--off-white); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .about-text p {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: var(--muted);
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+
+    .about-text p strong {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .about-facts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .fact {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      border: 1px solid var(--light);
+    }
+
+    .fact-number {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2rem;
+      color: var(--ink);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .fact-label {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    /* ── SKILLS ── */
+    #skills { background: var(--white); }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+
+    .skill-card {
+      background: var(--off-white);
+      border: 1px solid var(--light);
+      border-radius: 12px;
+      padding: 28px 20px;
+      text-align: center;
+      transition: border-color 0.2s, transform 0.2s, background 0.2s;
+    }
+
+    .skill-card:hover {
+      border-color: var(--accent);
+      background: var(--accent-light);
+      transform: translateY(-3px);
+    }
+
+    .skill-icon {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .skill-name {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .skill-level {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    /* ── PROJECTS ── */
+    #projects { background: var(--off-white); }
+
+    .project-card {
+      background: white;
+      border: 1px solid var(--light);
+      border-radius: 16px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 380px;
+      transition: box-shadow 0.3s;
+    }
+
+    .project-card:hover {
+      box-shadow: 0 12px 48px rgba(0,0,0,0.08);
+    }
+
+    .project-content {
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .project-tag {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+      align-self: flex-start;
+    }
+
+    .project-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.7rem;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .project-desc {
+      font-size: 0.9rem;
+      line-height: 1.75;
+      color: var(--muted);
+      font-weight: 300;
+      margin-bottom: 24px;
+    }
+
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+
+    .tech-tag {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--dark);
+      background: var(--off-white);
+      border: 1px solid var(--light);
+      padding: 4px 12px;
+      border-radius: 100px;
+    }
+
+    .project-links { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    .project-link {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--ink);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border-bottom: 1px solid var(--mid);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .project-link:hover { color: var(--accent); border-color: var(--accent); }
+
+    .project-link-secondary {
+      font-size: 0.82rem;
+      color: var(--muted);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+
+    .project-link-secondary:hover { color: var(--ink); }
+
+    .project-visual {
+      background: var(--off-white);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 48px;
+      gap: 16px;
+      border-left: 1px solid var(--light);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-visual::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: var(--accent-light);
+      opacity: 0.6;
+    }
+
+    .project-kpi {
+      background: white;
+      border: 1px solid var(--light);
+      border-radius: 12px;
+      padding: 20px 28px;
+      text-align: center;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .project-kpi-number {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.8rem;
+      color: var(--ink);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .project-kpi-label {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .coming-soon {
+      margin-top: 32px;
+      padding: 32px;
+      border: 1.5px dashed var(--mid);
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    .coming-soon p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .coming-soon strong {
+      font-size: 0.88rem;
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    /* ── EDUCATION ── */
+    #education { background: var(--white); }
+
+    .education-item {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 48px;
+      padding: 40px 0;
+      border-bottom: 1px solid var(--light);
+      align-items: start;
+    }
+
+    .education-item:first-of-type { border-top: 1px solid var(--light); }
+
+    .edu-year {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 400;
+      padding-top: 4px;
+    }
+
+    .edu-degree {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.3rem;
+      color: var(--ink);
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+
+    .edu-school {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 12px;
+      font-weight: 300;
+    }
+
+    .edu-detail {
+      font-size: 0.82rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--ink); color: white; text-align: center; }
+
+    #contact .section-label { color: var(--mid); justify-content: center; }
+    #contact .section-label::after { background: var(--mid); }
+
+    #contact .section-title { color: white; margin-bottom: 16px; }
+
+    .contact-sub {
+      font-size: 1rem;
+      color: var(--mid);
+      font-weight: 300;
+      margin-bottom: 48px;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 64px;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 28px;
+      border-radius: 100px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: transform 0.15s, background 0.2s;
+    }
+
+    .contact-link:hover { transform: translateY(-2px); }
+
+    .contact-link-primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .contact-link-outline {
+      border: 1px solid rgba(255,255,255,0.2);
+      color: white;
+    }
+
+    .contact-link-outline:hover { background: rgba(255,255,255,0.08); }
+
+    .contact-email {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+      color: rgba(255,255,255,0.4);
+      letter-spacing: -0.01em;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .contact-email:hover { color: white; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--ink);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 24px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    footer p {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    /* ── FADE IN ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; padding: 100px 24px 64px; text-align: center; }
+      .hero::after { display: none; }
+      .hero-desc { margin: 0 auto 40px; }
+      .hero-actions { justify-content: center; }
+      .hero-image { display: none; }
+      section { padding: 64px 24px; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .skills-grid { grid-template-columns: repeat(3, 1fr); }
+      .project-card { grid-template-columns: 1fr; }
+      .project-visual { display: none; }
+      .education-item { grid-template-columns: 1fr; gap: 8px; }
+      footer { flex-direction: column; gap: 8px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">Pooja Singh</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://linkedin.com/in/poojasingh2010" target="_blank" class="nav-cta">Hire me</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <div class="hero-tag">Data Analyst · Open to work</div>
+      <h1>Turning data into<br><em>decisions</em> that<br>matter.</h1>
+      <p class="hero-desc">
+        Aspiring data analyst with hands-on experience in SQL, Python, and Tableau.
+        I find patterns in data and translate them into clear business recommendations.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">View my work</a>
+        <a href="https://linkedin.com/in/poojasingh2010" target="_blank" class="btn-secondary">LinkedIn →</a>
+      </div>
     </div>
-</section>
 
+    <div class="hero-image">
+      <div class="hero-image-wrap">
+        <!-- Replace the div below with: <img src="your-photo.jpg" alt="Pooja Singh"> -->
+        <div class="hero-image-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+            <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+          <span>Add your photo here</span>
+        </div>
+      </div>
+      <div class="status-badge">
+        <span class="status-dot"></span>
+        Open to opportunities
+      </div>
+    </div>
+  </section>
 
-    <section class="ftco-section ftco-no-pb" id="resume-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-              <div class="col-md-10 heading-section text-center ftco-animate">
-                <h1 class="big big-2">Resume</h1>
-                <h2 class="mb-4">Resume</h2>
-                <a href="https://drive.google.com/file/d/1lPerJGDM9YmZSe0kSO16yMaKDWtT50e6/view?usp=sharing" class="btn btn-primary" target="_blank">Resume Link</a>
-              </div>
-            </div>
-		
-		    <div class="row">
-			    <div class="col-md-12">
-				    <div class="resume-wrap ftco-animate">
-					    <h2 class="mb-4">Experience</h2>
-					    <ul class="timeline">
-						    <li>
-							    <h5>Intern - Cybrom Technology Pvt. Ltd.</h5>
-							    <p><strong>Jan 2023 - Feb 2023</strong><br>Developed a comprehensive real estate market analysis project by integrating data generation, SQL queries, and data visualization.</p>
-                                			    <p>Techniques: Data Generation and Preprocessing using Python, SQL Queries, Data Visualization using PowerBI, Statistical Analysis.</p>
-						    </li>
-						    <li>
-							    <h5>Intern - JS Baghel & Co.</h5>
-							    <p><strong>May 2023 - July 2023</strong><br>Worked on mini project :- Comprehensive Analysis of Carbon Emissions by Commodity and Entity.</p>
-                               				    <p>Techniques: Data Cleaning, Data Analysis, Data Visualization, Statistical Analysis using Excel</p>
-					    </ul>
-				    </div>
-			    </div>
-		    </div>
-
-		</div>
-	</section>
-
-	<section class="ftco-section" id="education-section">
-	    <div class="container">
-	        <div class="row justify-content-center pb-5">
-	            <div class="col-md-10 heading-section text-center ftco-animate">
-	                <h1 class="big big-2">Education</h1>
-	                <h2 class="mb-4">Education</h2>
-	            </div>
-	        </div>
-	        <div class="row">
-	            <div class="col-md-4">
-	                <div class="project ftco-animate">
-	                    <h3 class="mb-4">Class XI (CBSE)</h3>
-			    <p><strong>Subjects</strong></p>
-	                    <p>Commerce with Maths</p>
-	                </div>
-	            </div>
-	            <div class="col-md-4">
-	                <div class="project ftco-animate">
-	                    <h3 class="mb-4">BSc Economics (H)</h3>
-	                    <p><strong>Subjects</strong></p>
-			    <p>Research Methodology, Business Accounting and Financial Analysis, Money, Banking and Finance, Financial Management, Corporate Finance, Economic Journalism, Portfolio Management, Taxation, Microeconomics, Macroeconomics, Econometrics</p>
-	                </div>
-	            </div>
-	            <div class="col-md-4">
-	                <div class="project ftco-animate">
-	                    <h3 class="mb-4">MSc Economics with Data Analytics Specialization</h3>
-			    <p><strong>Subjects</strong></p>
-	                    <p>Python, Data Analysis & Visualization, Data Mining, Financial Analytics, EDA, Big Data Analytics, Research Methodology</p>
-	                </div>
-	            </div>
-	        </div>
-	    </div>
-	</section>
-	
-
-	<section class="ftco-section ftco-no-pb" id="projects-section">
-      <div class="container">
-        <div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Projects</h1>
-            <h2 class="mb-4">Projects</h2>
-            <p>Coming soon...</p>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="fade-in">
+      <div class="section-label">About me</div>
+      <div class="about-grid">
+        <div>
+          <h2 class="section-title">I turn messy data<br>into clear stories.</h2>
+          <div class="about-text">
+            <p>
+              I'm <strong>Pooja Singh</strong>, a data analyst with an MSc in Economics with
+              Data Analytics Specialization from Symbiosis School of Economics, Pune.
+            </p>
+            <p>
+              I work across the full analytics pipeline — from writing complex SQL queries
+              and cleaning raw datasets to building dashboards that non-technical stakeholders
+              can actually use. I'm especially interested in <strong>retail analytics,
+              consumer behavior, and business strategy.</strong>
+            </p>
+            <p>
+              Currently seeking my first full-time data analyst role where I can turn
+              real business data into decisions that matter.
+            </p>
+          </div>
+        </div>
+        <div class="about-facts">
+          <div class="fact">
+            <div class="fact-number">8,500+</div>
+            <div class="fact-label">Records analysed in Blinkit project</div>
+          </div>
+          <div class="fact">
+            <div class="fact-number">10+</div>
+            <div class="fact-label">SQL queries with business context</div>
+          </div>
+          <div class="fact">
+            <div class="fact-number">5</div>
+            <div class="fact-label">Tools in my analytics stack</div>
+          </div>
+          <div class="fact">
+            <div class="fact-number">MSc</div>
+            <div class="fact-label">Economics with Data Analytics</div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-    	<div class="container">
-    		<div class="row justify-content-center mb-5">
-              <div class="col-md-10 heading-section text-center ftco-animate">
-              	<h2 class="mb-4">Contact Me</h2>
-              </div>
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="fade-in">
+      <div class="section-label">Skills</div>
+      <h2 class="section-title">My analytics toolkit.</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <span class="skill-icon">🗄️</span>
+          <div class="skill-name">SQL / MySQL</div>
+          <div class="skill-level">Window functions · CTEs · Procedures</div>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🐍</span>
+          <div class="skill-name">Python</div>
+          <div class="skill-level">Pandas · Data wrangling</div>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">📊</span>
+          <div class="skill-name">Power BI</div>
+          <div class="skill-level">Dashboards · DAX</div>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">📈</span>
+          <div class="skill-name">Tableau</div>
+          <div class="skill-level">Visual analytics · Public</div>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">📋</span>
+          <div class="skill-name">Excel</div>
+          <div class="skill-level">Pivot tables · Charts</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="fade-in">
+      <div class="section-label">Projects</div>
+      <h2 class="section-title">Work I'm proud of.</h2>
+
+      <div class="project-card">
+        <div class="project-content">
+          <div>
+            <span class="project-tag">SQL · Tableau · Retail Analytics</span>
+            <h3 class="project-title">Blinkit Sales Analysis</h3>
+            <p class="project-desc">
+              Analyzed 8,500+ retail records from Blinkit's grocery dataset using MySQL.
+              Uncovered outlet concentration risks, product mix signals, and visibility
+              insights — each backed by a concrete business recommendation.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Window Functions</span>
+              <span class="tech-tag">CTEs</span>
+              <span class="tech-tag">Stored Procedures</span>
+              <span class="tech-tag">Tableau</span>
             </div>
+          </div>
+          <div class="project-links">
+            <a href="https://public.tableau.com/views/BlinkitSalesAnalysisDashboard_17757189607720/BlinkitSalesAnalysisDashboard"
+               target="_blank" class="project-link">
+              View dashboard →
+            </a>
+            <a href="https://github.com/Pooja201001/blinkit-sql-sales-analysis"
+               target="_blank" class="project-link-secondary">
+              GitHub ↗
+            </a>
+            <a href="https://open.substack.com/pub/poojasinghwork20/p/what-i-learned-from-analyzing-8500"
+               target="_blank" class="project-link-secondary">
+              Blog post ↗
+            </a>
+          </div>
+        </div>
 
-            <div class="row d-flex contact-info mb-5">
-              <div class="col-md-4 d-flex">
-              	<div class="bg-light align-self-stretch box p-4 text-center">
-              		<h3 class="mb-4">Email</h3>
-	            <a href="mailto:poojasingh.work20@gmail.com">poojasingh.work20@gmail.com</a>
-	            </div>
-              </div>
-              <div class="col-md-4 d-flex">
-              	<div class="bg-light align-self-stretch box p-4 text-center">
-              		<h3 class="mb-4">LinkedIn</h3>
-	            <a href="https://www.linkedin.com/in/poojasingh2010/">Pooja Singh</a>
-	            </div>
-              </div>
-              <div class="col-md-4 d-flex">
-              	<div class="bg-light align-self-stretch box p-4 text-center">
-              		<h3 class="mb-4">Location</h3>
-	            <p>Pune, Maharashtra, India</p>
-	            </div>
-              </div>
-            </div>
-    	</div>
-    </section>
+        <div class="project-visual">
+          <div class="project-kpi">
+            <div class="project-kpi-number">₹1.2M</div>
+            <div class="project-kpi-label">Total revenue analysed</div>
+          </div>
+          <div class="project-kpi">
+            <div class="project-kpi-number">65%</div>
+            <div class="project-kpi-label">Type1 outlet revenue share</div>
+          </div>
+          <div class="project-kpi">
+            <div class="project-kpi-number">42%</div>
+            <div class="project-kpi-label">Medium outlet contribution</div>
+          </div>
+        </div>
+      </div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
-    <script src="js/main.js"></script>
+      <div class="coming-soon">
+        <p>More projects coming soon</p>
+        <strong>Python · Power BI · EDA projects in progress</strong>
+      </div>
+    </div>
+  </section>
 
-  </body>
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="fade-in">
+      <div class="section-label">Education</div>
+      <h2 class="section-title">Academic background.</h2>
+
+      <div class="education-item">
+        <div class="edu-year">2023 – 2025</div>
+        <div>
+          <div class="edu-degree">MSc Economics with Data Analytics</div>
+          <div class="edu-school">Symbiosis School of Economics, Pune</div>
+          <div class="edu-detail">Specialization in Data Analytics · Econometrics · Statistical Modelling</div>
+        </div>
+      </div>
+
+      <div class="education-item">
+        <div class="edu-year">2020 – 2023</div>
+        <div>
+          <div class="edu-degree">BSc Economics</div>
+          <div class="edu-school">Update with your undergraduate college</div>
+          <div class="edu-detail">Update with your degree details</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="fade-in">
+      <div class="section-label">Contact</div>
+      <h2 class="section-title">Let's work together.</h2>
+      <p class="contact-sub">
+        I'm actively looking for data analyst roles. If you have an opportunity,<br>
+        I'd love to hear from you.
+      </p>
+      <div class="contact-links">
+        <a href="https://linkedin.com/in/poojasingh2010" target="_blank" class="contact-link contact-link-primary">
+          Connect on LinkedIn
+        </a>
+        <a href="https://github.com/Pooja201001/blinkit-sql-sales-analysis" target="_blank" class="contact-link contact-link-outline">
+          View GitHub
+        </a>
+        <a href="https://open.substack.com/pub/poojasinghwork20" target="_blank" class="contact-link contact-link-outline">
+          Read my blog
+        </a>
+      </div>
+      <a href="mailto:poojasingh@email.com" class="contact-email">
+        Update with your email address →
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Pooja Singh</p>
+    <p>Built with intention. Designed to get hired.</p>
+  </footer>
+
+  <script>
+    // Fade in on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(el => {
+        if (el.isIntersecting) {
+          el.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
 </html>
